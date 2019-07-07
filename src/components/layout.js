@@ -7,12 +7,13 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import {useStaticQuery, graphql} from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import Navigation from "./navigation";
 
-const Layout = ({ children }) => {
+const Layout = ({children}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,22 +26,20 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <div id='container'>
+        <div id='main'>
+          <Header/>
+          <Navigation/>
+          <main>{children}</main>
+        </div>
       </div>
+      <footer id='footer'>
+        <div className='contact-container'>
+          <p className='contactus'> Contact us</p>
+          <p className='phone'><a href='tel:+919446605978'>+91 944605978 </a></p>
+          <p className='email'><a href='mailto:info@greeninnovations.in'>info@greeninnovations.in</a></p>
+        </div>
+      </footer>
     </>
   )
 }
