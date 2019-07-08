@@ -6,7 +6,9 @@ import HomePageImage from '../components/home-page-image'
 const IndexPage = () => (
   <Layout>
     <SEO title="Green Innovations"/>
+    <div className='wrapper'>
     <HomePageImage/>
+    </div>
   </Layout>
 )
 

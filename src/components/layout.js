@@ -12,6 +12,7 @@ import {useStaticQuery, graphql} from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import Navigation from "./navigation";
+import {FaEnvelope, FaPhone} from "react-icons/fa";
 
 const Layout = ({children}) => {
   const data = useStaticQuery(graphql`
@@ -36,8 +37,8 @@ const Layout = ({children}) => {
       <footer id='footer'>
         <div className='contact-container'>
           <p className='contactus'> Contact us</p>
-          <p className='phone'><a href='tel:+919446605978'>+91 944605978 </a></p>
-          <p className='email'><a href='mailto:info@greeninnovations.in'>info@greeninnovations.in</a></p>
+          <p className='phone'><FaPhone/> <a href='tel:+919446605978'>+91 944605978 </a></p>
+          <p className='email'><FaEnvelope/> <a href='mailto:info@greeninnovations.in'>info@greeninnovations.in</a></p>
         </div>
       </footer>
     </>

@@ -12,14 +12,21 @@
     src: url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 }
 
+@font-face {
+    font-family: "GarageGothic Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://cloud.webtype.com/webtype/ff2/3/b8a3f42a-7ece-4579-99ea-cdbaf3e990bd?ec_token=8f7c4c4997246fd7fa920076ca943b5669c950052a98eb3c1349029b7d01569364bb55d6202e307c3a92be263b91055163efc9fe04956f9a5cef2e08f9adb482b5b50eef4adb4ff89a01b2e9ec813eacdbcb579f413d23afbdb61df84f4d07800b8e1fcedffc542bc478090ee9a70a6be6230ad207e9640c02411204abe75e0941b2');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 html {
+    font-family: 'Roboto', sans-serif;
     font-size: calc(1em + 1vw);
     height: 100%;
 }
@@ -27,17 +34,19 @@ html {
 a {
     text-decoration: none;
 }
-#container{
+
+#container {
     min-height: 100%;
 }
-#main{
+
+#main {
     overflow: auto;
     padding-bottom: 70px;
 }
 
-#footer{
+#footer {
     background-color: #452a20;
-    background-image: linear-gradient(to right, #303030 , #1e3d05);
+    background-image: linear-gradient(to right, #303030, #1e3d05);
     color: white;
     position: relative;
     height: 70px;
@@ -48,13 +57,16 @@ a {
     justify-content: center;
     padding: 10px;
 }
+
 #footer .contact-container {
     text-align: center;
 }
-#footer a{
+
+#footer a {
     color: #fff;
 }
-#footer a:hover{
+
+#footer a:hover {
     color: green;
     cursor: pointer;
 }
@@ -74,44 +86,33 @@ ul {
 
 .header {
     background: #fff;
-    background-image: linear-gradient(to right, #fff , #1e3d05);
-    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 4px 0;
-    display: block;
 }
 
 .header .logo {
-    width: 10%;
-    float: left;
-}
-
-.header .caption {
-    width: 70%;
-    display: inline-block;
-    flex-grow: 1;
-    color: green;
-    text-align: center;
-    font-weight: bold;
-    padding: 20px 0;
-    font-size: .75em;
+    width: 50%;
+    min-height: 100%;
 }
 
 .header .getintouch {
-    width: 20%;
-    float: right;
-    display: inline-block;
     color: green;
-    font-size: .5em;
+    font-size: 2vw;
     text-align: right;
-    font-family: "Playfair Display", serif;
+
+    font-family: "GarageGothic Regular", Arial, Helvetica, sans-serif;
     font-weight: normal;
-}
-.header .getintouch a{
-     color: #fff;
+    line-height: 3vw;
 }
 
-.header .getintouch a:hover{
-    color: greenyellow;
+.header .getintouch a {
+    color: #000;
+}
+
+.header .getintouch a:hover {
+    color: green;
 }
 
 nav {
@@ -124,13 +125,16 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 nav ul li {
     padding: 10px;
     flex-grow: 1;
     text-align: center;
+}
+
+nav ul li.nav-icon {
+    display: none;
 }
 
 nav ul li:hover {
@@ -141,10 +145,49 @@ nav ul li:hover {
 
 img {
     height: auto;
-    max-width: 100%;
 }
 
-@media only screen and (max-width: 480px) {
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidenav a {
+    padding: 2vw;
+    text-decoration: none;
+    font-size: 4vw;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: green;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1vh;
+    font-size: 10vw;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 600px) {
     html {
         font-size: 100%;
     }
@@ -152,28 +195,45 @@ img {
     .wrapper {
         width: 100%;
     }
-    .header{
-        height: 50px;
-    }
-    .header .logo{
-        width: 20%;
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .header .caption{
-        padding: 15px 0;
-        font-size: .5em;
-        width: 50%;
-    }
-    .header .getintouch{
-        width: 30%;
-        font-size: .4em;
-        padding-right: 10px;
-    }
-    .header .getintouch p{
-        margin-bottom: 5px;
+    .header .logo {
+        width: 100%;
+        min-height: 100%;
     }
 
-    #footer p{
+    .header .getintouch {
+        margin-top: 10px;
+        font-size: 5vw;
+        text-align: center;
+        line-height: 6vw;
+    }
+    nav{
+        font-size: .7em;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    nav ul li {
+        flex-grow: unset;
+    }
+
+    nav ul li.nav-icon {
+        display: inline-block;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer p {
         display: inline-block;
         margin: 5px;
     }
