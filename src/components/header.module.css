@@ -1,0 +1,175 @@
+/*header*/
+
+.header {
+    /*position: relative;*/
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: .5s;
+    padding: 4px 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    right: 10%;
+}
+
+.header .logo {
+    width: 8vw;
+    min-height: 100%;
+}
+
+.header .getintouch {
+    color: green;
+    font-size: 2vw;
+    text-align: right;
+
+    font-family: "GarageGothic Regular", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 3vw;
+}
+
+/******nav*/
+
+nav {
+    color: #000;
+    padding-right: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .5em;
+}
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.desktop-nav-link {
+    color: black;
+    padding: 10px;
+    flex-grow: 1;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.nav-icon {
+    display: none;
+    font-size: 5vw;
+    padding: 30px 10px;
+}
+
+.desktop-nav-link:hover {
+    background-color: #ccc;
+    color: green;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.active {
+    color: green;
+    background-color: #ccc;
+}
+
+
+/*mobile*/
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    padding-top: 10vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidenav a {
+    padding: 2vw;
+    text-decoration: none;
+    font-size: 4vw;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: green;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1vh;
+    font-size: 10vw;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    nav {
+        font-size: .3em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        left: 0;
+        right: 0;
+        border-radius: unset;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header .logo {
+        width: 50%;
+        margin: 0 auto;
+        min-height: 100%;
+    }
+
+    .header .getintouch {
+        margin-top: 10px;
+        font-size: 5vw;
+        text-align: center;
+        line-height: 6vw;
+    }
+
+    nav {
+        font-size: 1em;
+        float: left;
+        position: fixed;
+        z-index: 1;
+    }
+
+    nav div a {
+        display: none;
+    }
+
+    nav div a {
+        flex-grow: unset;
+    }
+
+    .nav-icon {
+        display: inline-block;
+    }
+}

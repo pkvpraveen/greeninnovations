@@ -7,43 +7,21 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import {useStaticQuery, graphql} from "gatsby"
 import styled from 'styled-components'
-
-import BackgroundImage from 'gatsby-background-image'
-
-import Header from "./header"
 import "./layout.css"
-import Navigation from "./navigation";
 import {FaEnvelope, FaPhone} from "react-icons/fa";
+import MyHeader from "./newHeader";
 
-const Layout = ({children, className}) => {
-  const data = useStaticQuery(graphql`
-    query {
-        desktop: file(relativePath: { eq: "SUS2.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `)
-  console.log(data);
-  const imageData = data.desktop.childImageSharp.fluid
+const Layout = ({children, headerElement, height, align}) => {
+
   return (
     <>
-
-      <BackgroundImage Tag="section"
-                       className={className}
-                       fluid={imageData}
-                       backgroundColor={`#040e18`}
-      >
-        <div id='container' style={{height: '100vh'}}>
-          <Header/>
-          <main>{children}</main>
+      <div id='container'>
+        <div id="main">
+          <MyHeader height={height} headerElement={headerElement} align={align}/>
+          <main style={{display: 'flex', justifyContent: 'center', flexDirection:'column'}}>{children}</main>
         </div>
-      </BackgroundImage>
+      </div>
       <footer id='footer'>
         <div className='contact-container'>
           <p className='contactus'> Contact us</p>

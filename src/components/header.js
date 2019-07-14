@@ -1,17 +1,10 @@
 import {Link} from "gatsby"
 import React from "react"
 import Logo from './logo'
-import {
-  FaAddressCard, FaBars,
-  FaEnvelope,
-  FaHome,
-  FaInfoCircle,
-  FaNewspaper,
-  FaPhone,
-  FaSeedling,
-  FaUsers
-} from "react-icons/fa";
+import {FaAddressCard, FaBars, FaHome, FaInfoCircle, FaNewspaper, FaSeedling, FaUsers} from "react-icons/fa";
 import {MdPhotoLibrary} from "react-icons/md";
+import headerStyles from './header.module.css';
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "100%";
 }
@@ -19,39 +12,52 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-const Header = () => (
-  <header className='header wrapper'>
-    <div className='logo'>
-      <Link to='/'>
-        <Logo/>
-      </Link>
-    </div>
+
+
+const Header = () => {
+
+  return (
+    <header className={headerStyles.header + ' wrapper'}>
+      <div className={headerStyles.logo}>
+        <Link to='/'>
+          <Logo/>
+        </Link>
+      </div>
       <nav>
-        <ul className='wrapper'>
-          <li><FaHome/><br/> Home</li>
-          <li><FaSeedling/> <br/>Products</li>
-          <li><FaUsers/><br/> Customers</li>
-          <li><MdPhotoLibrary/><br/> Gallery</li>
-          <li><FaNewspaper/><br/> News</li>
-          <li style={{flexShrink: 0}}><FaInfoCircle/><br/> About Us</li>
-          <li style={{flexShrink: 0}}><FaAddressCard/><br/> Contact Us</li>
-          <li className='nav-icon' onClick={openNav}>
+        <div className={headerStyles.desktopNav + ' wrapper'}>
+          <Link className={headerStyles.desktopNavLink} to='/' activeClassName={headerStyles.active}>
+            <FaHome/><br/> Home</Link>
+          <Link className={headerStyles.desktopNavLink} to='/products'
+                activeClassName={headerStyles.active}><FaSeedling/>
+            <br/>Products</Link>
+          <Link className={headerStyles.desktopNavLink} to='customers'
+                activeClassName={headerStyles.active}><FaUsers/><br/> Customers</Link>
+          <Link className={headerStyles.desktopNavLink} to='/gallery'
+                activeClassName={headerStyles.active}><MdPhotoLibrary/><br/> Gallery</Link>
+          <Link className={headerStyles.desktopNavLink} to='/news'
+                activeClassName={headerStyles.active}><FaNewspaper/><br/> News</Link>
+          <Link className={headerStyles.desktopNavLink} to='/aboutus' style={{flexShrink: 0}}
+                activeClassName={headerStyles.active}><FaInfoCircle/><br/> About Us</Link>
+          <Link className={headerStyles.desktopNavLink} to='/contactus' activeClassName={headerStyles.active}
+                style={{flexShrink: 0}}><FaAddressCard/><br/> Contact Us</Link>
+          <a className={headerStyles.navIcon + ' ' + headerStyles.desktopNavLink} onClick={openNav}>
             <FaBars/>
-          </li>
-        </ul>
-        <div id="mySidenav" className="sidenav">
-          <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
-          <a href="#" onClick={closeNav}><FaHome/> Home</a>
-          <a href="#" onClick={closeNav}><FaSeedling/> Products</a>
-          <a href="#" onClick={closeNav}><FaUsers/> Customers</a>
-          <a href="#" onClick={closeNav}><MdPhotoLibrary/> Gallery</a>
-          <a href="#" onClick={closeNav}><FaNewspaper/> News</a>
-          <a href="#" onClick={closeNav}><FaInfoCircle/> About</a>
-          <a href="#" onClick={closeNav}><FaAddressCard/> Contact</a>
+          </a>
+        </div>
+        <div id="mySidenav" className={headerStyles.sidenav}>
+          <a href="javascript:void(0)" className={headerStyles.closebtn} onClick={closeNav}>&times;</a>
+          <Link to='/'><FaHome/> Home</Link>
+          <Link onClick={closeNav} to='/products'><FaSeedling/> Products</Link>
+          <Link onClick={closeNav} to='customers'><FaUsers/> Customers</Link>
+          <Link onClick={closeNav} to='/gallery'><MdPhotoLibrary/> Gallery</Link>
+          <Link onClick={closeNav} to='/news'><FaNewspaper/> News</Link>
+          <Link onClick={closeNav} to='/aboutus'><FaInfoCircle/> About Us</Link>
+          <Link onClick={closeNav} to='/contactus'><FaAddressCard/> Contact Us</Link>
         </div>
       </nav>
-  </header>
-)
+    </header>
+  )
+}
 
 
 export default Header

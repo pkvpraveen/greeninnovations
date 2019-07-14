@@ -1,0 +1,70 @@
+
+.heading {
+    padding: 10px;
+    font-size: 3vw;
+    color: #7c795d; font-family: 'Trocchi', serif; font-weight: normal; line-height: 48px; margin: 0;
+}
+
+.paragraph {
+    margin: 20px 10px;
+}
+
+.product-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    z-index: 50;
+}
+
+.product-list li {
+    width: 25%;
+    height: 30px;
+    padding: 50px;
+    margin: 1px;
+    flex-grow: 0;
+    background-color: #6d92a2;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-list li a {
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+
+.product-list li:hover {
+    background-color: #1e3d05;
+}
+
+.product-list li:hover a {
+    cursor: pointer;
+}
+
+.strength-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    z-index: 50;
+}
+
+.strength-list li {
+    width: 25%;
+    padding: 50px;
+    margin: 1px;
+    flex-grow: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+@media only screen and (max-width: 650px) {
+    .product-list li,.strength-list li {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

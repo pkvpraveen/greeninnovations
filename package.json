@@ -17,9 +17,12 @@
     "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
+    "react-responsive-carousel": "^3.1.49",
+    "react-sticky-header": "^0.2.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

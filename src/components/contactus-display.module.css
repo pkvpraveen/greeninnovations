@@ -1,0 +1,22 @@
+
+.heading {
+    padding: 10px;
+    font-size: 3vw;
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0;
+}
+
+.paragraph {
+    margin: 20px 30px;
+}
+
+.phone {
+    margin: 10px 30px;
+}
+
+.email {
+    margin: 10px 30px;
+}
