@@ -4,7 +4,7 @@ import Header from './header'
 import {graphql, useStaticQuery} from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 
-const MyHeader = ({height,headerElement,align}) => {
+const MyHeader = ({height, headerElement, align,marginTop}) => {
   const data = useStaticQuery(graphql`
     query {
         desktop: file(relativePath: { eq: "SUS2.jpg" }) {
@@ -26,7 +26,8 @@ const MyHeader = ({height,headerElement,align}) => {
                        fluid={imageData}
                        backgroundColor={`#040e18`}
     >
-      <section style={{minHeight: height, display:'flex',justifyContent:'center',alignItems:align}}>
+      <section
+        style={{minHeight: height, marginTop: marginTop, display: 'flex', justifyContent: 'center', alignItems: align}}>
         {headerElement}
       </section>
     </BackgroundImage>

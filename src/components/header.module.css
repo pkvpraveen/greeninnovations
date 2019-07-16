@@ -6,10 +6,10 @@
     border-radius: 0 0 5px 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     transition: .5s;
-    padding: 4px 0;
+    padding: 4px 4px;
 }
 
 .sticky {
@@ -20,24 +20,32 @@
 }
 
 .header .logo {
-    width: 8vw;
+    width: 25vw;
     min-height: 100%;
 }
 
-.header .getintouch {
-    color: green;
+.mastHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.getintouch {
     font-size: 2vw;
     text-align: right;
-
-    font-family: "GarageGothic Regular", Arial, Helvetica, sans-serif;
     font-weight: normal;
-    line-height: 3vw;
+    line-height: 2vw;
+}
+
+.getintouch a {
+    color: #000;
 }
 
 /******nav*/
 
 nav {
     color: #000;
+    background-color: #ccc;
     padding-right: 5px;
     text-transform: uppercase;
     font-weight: bold;
@@ -64,7 +72,7 @@ nav {
 }
 
 .desktop-nav-link:hover {
-    background-color: #ccc;
+    background-color: #fff;
     color: green;
     transition: .5s;
     cursor: pointer;
@@ -72,7 +80,7 @@ nav {
 
 .active {
     color: green;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 
@@ -132,13 +140,19 @@ nav {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     .header {
         left: 0;
         right: 0;
         border-radius: unset;
         flex-direction: column;
         justify-content: center;
+        padding: 4px 0;
+    }
+
+    .mastHeader {
+        flex-direction: column;
+        align-content: flex-start;
     }
 
     .header .logo {
@@ -147,8 +161,10 @@ nav {
         min-height: 100%;
     }
 
-    .header .getintouch {
-        margin-top: 10px;
+    .getintouch {
+        background-color: white;
+        margin-top: -25px;
+        width: 100%;
         font-size: 5vw;
         text-align: center;
         line-height: 6vw;
@@ -171,5 +187,13 @@ nav {
 
     .nav-icon {
         display: inline-block;
+        position: fixed;
+        background-color: white;
+        top: 40vh;
+        left: -1px;
+        color: green;
+        font-size: 6vw;
+        padding: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }

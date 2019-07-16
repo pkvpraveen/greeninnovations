@@ -5,7 +5,8 @@ import Display from '../components/contactus-display'
 
 const ContactUsPage = () => (
   <Layout headerElement={<Display/>}
-          align={'flex-end'}>
+          align={'flex-end'}
+          marginTop='60px'>
     <SEO title="Contact Us"/>
   </Layout>
 )

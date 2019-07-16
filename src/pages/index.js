@@ -9,10 +9,11 @@ const IndexPage = () => {
   return (
     <Layout headerElement={<Display/>}
             height='100vh'
-            align='flex-end'>
+            align='center'
+            marginTop='70px'>
       <SEO title="Home"/>
-      <AboutUsDisplay />
-      <ContactUsDisplay />
+      <AboutUsDisplay/>
+      <ContactUsDisplay/>
     </Layout>
   )
 }

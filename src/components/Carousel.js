@@ -23,7 +23,7 @@ export default () => {
   const images = data.allFile.edges.map(e => <div key={e.node.childImageSharp.fluid.name}><img src={e.node.childImageSharp.fluid.src} alt='image'/>
   </div>)
   return (
-    <Carousel autoPlay infiniteLoop  useKeyboardArrows emulateTouch dynamicHeight>
+    <Carousel autoPlay infiniteLoop  useKeyboardArrows emulateTouch showThumbs={false}>
       {images}
     </Carousel>
   );

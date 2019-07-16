@@ -51,19 +51,7 @@ a {
     padding-bottom: 70px;
 }
 
-#footer {
-    background-color: #452a20;
-    background-image: linear-gradient(to right, #303030, #1e3d05);
-    color: white;
-    position: relative;
-    height: 70px;
-    margin-top: -70px;
-    clear: both;
-    font-size: .5em;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
+
 
 .ReactStickyHeader_root {
     width: 100%;
@@ -105,19 +93,6 @@ a {
     z-index: 10;
 }
 
-#footer .contact-container {
-    text-align: center;
-}
-
-#footer a {
-    color: #fff;
-}
-
-#footer a:hover {
-    color: green;
-    cursor: pointer;
-}
-
 .wrapper {
     margin: 0 auto;
     width: 80%;
@@ -142,7 +117,7 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     html {
         font-size: 100%;
     }
@@ -151,8 +126,5 @@ img {
         width: 100%;
     }
 
-    #footer p {
-        display: inline-block;
-        margin: 5px;
-    }
+
 }

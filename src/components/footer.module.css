@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url("https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2") format("woff2");
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.footer {
+    background-color: #452a20;
+    background-image: linear-gradient(to right, #303030, #1e3d05);
+    color: white;
+    position: relative;
+    margin-top: -70px;
+    clear: both;
+    padding: 10px;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Source Sans Pro, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+.footerContent section{
+    width: 50%;
+}
+
+.footerContent section p ul {
+    list-style: unset;
+    margin-left: 20px;
+}
+
+.footerContent section p ul li {
+    padding: 5px;
+}
+
+.footer .contact-container {
+    text-align: center;
+}
+
+.footerContent section dl.alt::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footerContent section dl {
+    margin: 0 0 2em;
+}
+
+.footerContent section dl dt {
+    font-weight: 400;
+    color: #fff;
+}
+
+.footerContent section dl dt {
+    margin-left: 2em;
+}
+
+.footerContent section dl dt {
+    display: block;
+    width: 3em;
+    margin: 0;
+    clear: left;
+    float: left;
+}
+
+.footerContent section dl dd {
+    margin: 0 0 .85em 5.5em;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 10pt;
+}
+
+@media only screen and (max-width: 650px) {
+    .footer p {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

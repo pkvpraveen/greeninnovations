@@ -11,25 +11,19 @@ import styled from 'styled-components'
 import "./layout.css"
 import {FaEnvelope, FaPhone} from "react-icons/fa";
 import MyHeader from "./newHeader";
+import Footer from "./footer";
 
-const Layout = ({children, headerElement, height, align}) => {
+const Layout = ({children, headerElement, height, align, marginTop = '0px'}) => {
 
   return (
     <>
       <div id='container'>
         <div id="main">
           <MyHeader height={height} headerElement={headerElement} align={align}/>
-          <main style={{display: 'flex', justifyContent: 'center', flexDirection:'column'}}>{children}</main>
+          <main style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>{children}</main>
         </div>
       </div>
-      <footer id='footer'>
-        <div className='contact-container'>
-          <p className='contactus'> Contact us</p>
-          <p className='phone'><FaPhone/> <a href='tel:+919446605978'>+91 9446605978 </a></p>
-          <p className='email'><FaEnvelope/> <a
-            href='mailto:greeninnovationsinfo@gmail.com'>greeninnovationsinfo@gmail.com</a></p>
-        </div>
-      </footer>
+      <Footer/>
     </>
   )
 }
