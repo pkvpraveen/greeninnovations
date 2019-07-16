@@ -2,12 +2,13 @@ import {Link} from "gatsby"
 import React from "react"
 import Logo from './logo'
 import {
-  FaAddressCard, FaAngleDoubleRight,
-  FaBars,
-  FaEnvelope,
+  FaAddressCard,
+  FaAngleDoubleRight,
   FaHome,
   FaInfoCircle,
-  FaNewspaper, FaPhone, FaRegEnvelope,
+  FaNewspaper,
+  FaPhone,
+  FaRegEnvelope,
   FaSeedling,
   FaUsers
 } from "react-icons/fa";

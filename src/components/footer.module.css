@@ -95,4 +95,37 @@
         flex-direction: column;
         justify-content: space-between;
     }
+    .footerContent section{
+        width: 100%;
+    }
+    .footerContent h2{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
+    /******/
+    .footerContent section dl {
+        margin: 0;
+    }
+
+    .footerContent section dl dt {
+        font-weight: 600;
+        color: #fff;
+        margin: 5px 0;
+    }
+
+    .footerContent section dl dt {
+        display: block;
+        width: 3em;
+        margin: 0;
+        clear: unset;
+        float: unset;
+    }
+
+    .footerContent section dl dd {
+        display: block;
+        margin: 0 0 10px;
+    }
+
 }

@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import "./layout.css"
-import {FaEnvelope, FaPhone} from "react-icons/fa";
 import MyHeader from "./newHeader";
 import Footer from "./footer";
 
