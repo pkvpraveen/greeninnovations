@@ -3,9 +3,9 @@ import React from "react"
 import Logo from './logo'
 import {
   FaAddressCard,
-  FaAngleDoubleRight,
+  FaAngleDoubleRight, FaCaretDown, FaDumpsterFire,
   FaHome,
-  FaInfoCircle,
+  FaInfoCircle, FaLeaf,
   FaNewspaper,
   FaPhone,
   FaRegEnvelope,
@@ -40,7 +40,7 @@ const Header = () => {
           }}>Get in touch</p>
           <p><FaPhone size={18} color='#000'/> <a href='tel:+919446605978'>+91 9446605978</a></p>
           <p><FaRegEnvelope size={18} color='#000' style={{marginRight: '2px', marginBottom: '-2px'}}/> <a
-            href='mailto:info@greeninnovations.in'>info@greeninnovations.in</a></p>
+            href='mailto:greeninnovationsinfo@gmail.com'>greeninnovationsinfo@gmail.com</a></p>
         </div>
       </div>
       <div>
@@ -48,9 +48,13 @@ const Header = () => {
           <div className={headerStyles.desktopNav + ' wrapper'}>
             <Link className={headerStyles.desktopNavLink} to='/' activeClassName={headerStyles.active}>
               <FaHome/> Home</Link>
-            <Link className={headerStyles.desktopNavLink} to='/products'
-                  activeClassName={headerStyles.active}><FaSeedling/>
-              Products</Link>
+            <a className={headerStyles.desktopNavLink + ' ' + headerStyles.dropdown}>
+              <FaSeedling/>Products <FaCaretDown/>
+              <div className={headerStyles.dropdownContent}>
+                <Link to="/nofuel">NO FUEL INCINERATOR</Link>
+                <Link to="/diesel">DIESEL INCINERATOR</Link>
+              </div>
+            </a>
             <Link className={headerStyles.desktopNavLink} to='customers'
                   activeClassName={headerStyles.active}><FaUsers/>Customers</Link>
             <Link className={headerStyles.desktopNavLink} to='/gallery'
@@ -68,7 +72,11 @@ const Header = () => {
           <div id="mySidenav" className={headerStyles.sidenav}>
             <a href="javascript:void(0)" className={headerStyles.closebtn} onClick={closeNav}>&times;</a>
             <Link to='/'><FaHome/> Home</Link>
-            <Link onClick={closeNav} to='/products'><FaSeedling/> Products</Link>
+            <a><FaSeedling/> Products</a>
+            <div className={headerStyles.sublist}>
+              <Link onClick={closeNav} to='/nofuel'><FaLeaf/> No Fuel INCINERATOR </Link>
+              <Link onClick={closeNav} to='/diesel'><FaDumpsterFire/> DIESEL INCINERATOR </Link>
+            </div>
             <Link onClick={closeNav} to='customers'><FaUsers/> Customers</Link>
             <Link onClick={closeNav} to='/gallery'><MdPhotoLibrary/> Gallery</Link>
             <Link onClick={closeNav} to='/news'><FaNewspaper/> News</Link>

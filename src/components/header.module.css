@@ -31,10 +31,10 @@
 }
 
 .getintouch {
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: right;
     font-weight: normal;
-    line-height: 2vw;
+    line-height: 2.5vw;
 }
 
 .getintouch a {
@@ -45,7 +45,7 @@
 
 nav {
     color: #000;
-    background-color: #ccc;
+    background-color: #fff;
     padding-right: 5px;
     text-transform: uppercase;
     font-weight: bold;
@@ -83,6 +83,35 @@ nav {
     background-color: #fff;
 }
 
+/****dropdown*/
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 /*mobile*/
 
@@ -99,14 +128,14 @@ nav {
     display: flex;
     flex-direction: column;
     transition: 0.5s;
-    padding-top: 10vw;
+    padding-top: 20vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sidenav a {
     padding: 2vw;
     text-decoration: none;
-    font-size: 4vw;
+    font-size: 5vw;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -120,8 +149,9 @@ nav {
     position: absolute;
     top: 0;
     right: 1vh;
-    font-size: 10vw;
+    font-size: 20vw;
     margin-left: 50px;
+    line-height: 10vw;
 }
 
 @media screen and (max-height: 450px) {
@@ -156,14 +186,13 @@ nav {
     }
 
     .header .logo {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
-        min-height: 100%;
+        min-height: unset;
     }
 
     .getintouch {
         background-color: white;
-        margin-top: -25px;
         width: 100%;
         font-size: 5vw;
         text-align: center;
@@ -184,12 +213,15 @@ nav {
     nav div a {
         flex-grow: unset;
     }
+    .sublist{
+        margin-left: 5vw;
+    }
 
     .nav-icon {
         display: inline-block;
         position: fixed;
         background-color: white;
-        top: 40vh;
+        top: 8vh;
         left: -1px;
         color: green;
         font-size: 6vw;

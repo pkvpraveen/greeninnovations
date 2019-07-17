@@ -10,7 +10,7 @@ const Display = () => {
       you is to give us a call or send us an email.</p>
     <br/>
     <h4><MdLocationOn/>ADDRESS</h4>
-    <p className={styles.paragraph}>
+    <div className={styles.paragraph}>
       <h5>Office</h5>
       <address> Tech Mechanica Enterprises<br/>1/61, Kallungal Building,<br/>
         Periyar Nagar, Aluva East,<br/>
@@ -23,7 +23,7 @@ const Display = () => {
         Nanadom, Udayanapuram P.O.<br/>
         Kottayam Dt., Kerala Pin – 686143
       </address>
-    </p>
+    </div>
     <h4><FaPhone/> Lets Talk</h4>
     <p className={styles.phone}><a href='tel:+919446605978'>+91 9446605978 </a>
     </p>

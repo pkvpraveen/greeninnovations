@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './footer.module.css'
+import {Link} from "gatsby";
 
 const Footer = (props) => (
   <footer className={classes.footer}>
@@ -8,8 +9,8 @@ const Footer = (props) => (
         <h2>Links</h2>
         <p>
           <ul>
-            <li><a href='#'> No Fuel or Fuel Free Incinerator</a></li>
-            <li><a href='#'> Diesel Incinerator</a></li>
+            <li><Link to={'/nofuel'}> No Fuel or Fuel Free Incinerator</Link></li>
+            <li><Link to='/diesel'> Diesel Incinerator</Link></li>
             <li><a href='#'> Napkin Incinerator</a></li>
             <li><a href='#'> Automatic Composting Machine</a></li>
             <li><a href='#'> Manual Composting Machine</a></li>

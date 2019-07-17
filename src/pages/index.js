@@ -12,8 +12,8 @@ const IndexPage = () => {
             align='center'
             marginTop='70px'>
       <SEO title="Home"/>
+      <Display/>
       <AboutUsDisplay/>
-      <ContactUsDisplay/>
     </Layout>
   )
 }

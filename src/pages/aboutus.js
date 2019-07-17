@@ -7,6 +7,7 @@ const AboutUsPage = () => {
   return (
     <Layout headerElement={<Display/>} height='' align='flex-end' marginTop='60px'>
       <SEO title="About Us"/>
+      <Display/>
     </Layout>);
 }
 export default AboutUsPage

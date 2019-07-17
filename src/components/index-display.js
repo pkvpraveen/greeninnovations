@@ -7,6 +7,6 @@ import {Link} from "gatsby"
 export default () => <div className={'wrapper ' + styles.root}>
   <Carousel/>
   <div className={styles.buttonContainer}>
-    <Link to={'/products'} className={styles.button}> Learn More</Link>
+    <a href='#aboutus' className={styles.button}> Learn More</a>
   </div>
 </div>

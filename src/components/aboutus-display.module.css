@@ -2,7 +2,11 @@
 .heading {
     padding: 10px;
     font-size: 3vw;
-    color: #7c795d; font-family: 'Trocchi', serif; font-weight: normal; line-height: 48px; margin: 0;
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0;
 }
 
 .paragraph {
@@ -20,11 +24,10 @@
 
 .product-list li {
     width: 25%;
-    height: 30px;
-    padding: 50px;
+    padding: 10px 5px;
     margin: 1px;
     flex-grow: 0;
-    background-color: #6d92a2;
+    background-color: #1b4724;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -36,14 +39,14 @@
 }
 
 .product-list li:hover {
-    background-color: #1e3d05;
+    background-color: #471d1b;
 }
 
 .product-list li:hover a {
     cursor: pointer;
 }
 
-.strength-list{
+.strength-list {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -54,8 +57,8 @@
 
 .strength-list li {
     width: 25%;
-    padding: 50px;
-    margin: 1px;
+    padding: 10px 5px;
+    margin: 10px;
     flex-grow: 0;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -63,8 +66,9 @@
 
 
 @media only screen and (max-width: 650px) {
-    .product-list li,.strength-list li {
+    .product-list li, .strength-list li {
         width: 100%;
         font-size: 1rem;
+        margin: 10px 0;
     }
 }

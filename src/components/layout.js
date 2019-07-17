@@ -9,18 +9,45 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import "./layout.css"
-import MyHeader from "./newHeader";
 import Footer from "./footer";
+import Header from "./header";
+import BackgroundImage from "gatsby-background-image";
+import {graphql, useStaticQuery} from "gatsby";
+import WebFont from 'webfontloader';
 
 const Layout = ({children, headerElement, height, align, marginTop = '0px'}) => {
+  const data = useStaticQuery(graphql`
+    query {
+        desktop: file(relativePath: { eq: "SUS2.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 4160) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `)
+  const imageData = data.desktop.childImageSharp.fluid
 
+  if (typeof window !== "undefined") {
+    WebFont.load({
+      google: {
+        families: ['Roboto', 'Playfair Display', 'GarageGothic Regular', 'Bree Serif']
+      }
+    });
+  }
   return (
     <>
       <div id='container'>
-        <div id="main">
-          <MyHeader height={height} headerElement={headerElement} align={align}/>
-          <main style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>{children}</main>
-        </div>
+        <BackgroundImage Tag="section"
+                         fluid={imageData}
+                         backgroundColor={`#040e18`}
+        >
+          <div id="main">
+            <Header/>
+            <main style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>{children}</main>
+          </div>
+        </BackgroundImage>
       </div>
       <Footer/>
     </>

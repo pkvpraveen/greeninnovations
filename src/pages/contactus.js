@@ -8,6 +8,7 @@ const ContactUsPage = () => (
           align={'flex-end'}
           marginTop='60px'>
     <SEO title="Contact Us"/>
+    <Display/>
   </Layout>
 )
 
