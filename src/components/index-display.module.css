@@ -42,4 +42,8 @@
         height: 100%;
         margin-top: 20px;
     }
+
+    .heading {
+        font-size: unset;
+    }
 }

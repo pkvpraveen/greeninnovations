@@ -52,7 +52,6 @@ a {
 }
 
 
-
 .ReactStickyHeader_root {
     width: 100%;
     position: relative;
@@ -124,6 +123,10 @@ img {
 
     .wrapper {
         width: 100%;
+    }
+
+    .display {
+        font-size: .75rem;
     }
 
 

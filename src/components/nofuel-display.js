@@ -1,7 +1,24 @@
 import React from "react";
 import styles from './nofuel-display.module.css'
+import {graphql, useStaticQuery} from "gatsby";
+import PodPhotos from "./photogallery";
 
 const Display = ({}) => {
+  const images = useStaticQuery(graphql`
+   query NofuelPhotos {
+  allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "nofuel"}}) {
+    edges {
+      node {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+}
+  `);
   return <div className={'wrapper display'}>
     <h3 className={styles.heading}>NO FUEL INCINERATOR</h3>
     <ul className={styles.list}>
@@ -51,6 +68,9 @@ const Display = ({}) => {
       <li> Collect ash from the ash removal door provided at bottom cone once the incineration is complete</li>
       <li> Clean the gratings regularly to ensure unrestricted circulation of air during incineration process</li>
     </ul>
+    <div className={styles.imageContainer}>
+      <PodPhotos data={images}/>
+    </div>
   </div>
 }
 

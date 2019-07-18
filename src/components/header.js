@@ -10,7 +10,8 @@ import {
   FaPhone,
   FaRegEnvelope,
   FaSeedling,
-  FaUsers
+  FaUsers,
+  FaBath
 } from "react-icons/fa";
 import {MdPhotoLibrary} from "react-icons/md";
 import headerStyles from './header.module.css';
@@ -51,8 +52,9 @@ const Header = () => {
             <a className={headerStyles.desktopNavLink + ' ' + headerStyles.dropdown}>
               <FaSeedling/>Products <FaCaretDown/>
               <div className={headerStyles.dropdownContent}>
-                <Link to="/nofuel">NO FUEL INCINERATOR</Link>
-                <Link to="/diesel">DIESEL INCINERATOR</Link>
+                <Link to="/nofuel">No Fuel Incinerator</Link>
+                <Link to="/diesel">Diesel Incinerator</Link>
+                <Link to="/selfwateringpots">Self Watering Pots</Link>
               </div>
             </a>
             <Link className={headerStyles.desktopNavLink} to='customers'
@@ -74,8 +76,9 @@ const Header = () => {
             <Link to='/'><FaHome/> Home</Link>
             <a><FaSeedling/> Products</a>
             <div className={headerStyles.sublist}>
-              <Link onClick={closeNav} to='/nofuel'><FaLeaf/> No Fuel INCINERATOR </Link>
-              <Link onClick={closeNav} to='/diesel'><FaDumpsterFire/> DIESEL INCINERATOR </Link>
+              <Link onClick={closeNav} to='/nofuel'><FaLeaf/> No Fuel Incinerator </Link>
+              <Link onClick={closeNav} to='/diesel'><FaDumpsterFire/> Diesel Incinerator </Link>
+              <Link onClick={closeNav} to="/selfwateringpots"><FaBath/> Self Watering Pots</Link>
             </div>
             <Link onClick={closeNav} to='customers'><FaUsers/> Customers</Link>
             <Link onClick={closeNav} to='/gallery'><MdPhotoLibrary/> Gallery</Link>
