@@ -15,9 +15,7 @@ const Display = ({}) => {
       brands in this field.</p>
 
     <p className={styles.paragraph}>Our <strong>No fuel Incinerator</strong> or <strong>Fuel free
-      Incinerator</strong> is famous in the state for itsWeb Font Loader v1.6.28 - (c) Adobe Systems, Google. License:
-      Apache 2.0
-      durability & reliability. The
+      Incinerator</strong> is famous in the state for its durability & reliability. The
       modular design is helpful in maintenance & repair activities. The ergonomic design helps in operator comfort. We
       are the pioneers in Diesel Incinerators in the state. Our single/double chambered Diesel Incinerators are used
       in many prominent institutions.</p>
@@ -32,6 +30,7 @@ const Display = ({}) => {
     <ul className={styles.productList}>
       <li><Link to={'/nofuel'}> No Fuel or Fuel Free Incinerator</Link></li>
       <li><Link to={'/diesel'}> Diesel Incinerator</Link></li>
+      <li><Link to={'/selfwateringpots'}> Self-Watering Pots</Link></li>
       <li><a href={'#'}> Napkin Incinerator</a></li>
       <li><a href={'#'}> Automatic Composting Machine</a></li>
       <li><a href={'#'}> Manual Composting Machine</a></li>
@@ -40,7 +39,6 @@ const Display = ({}) => {
       <li><a href={'#'}> Waste Dewatering Systems</a></li>
       <li><a href={'#'}> Bio Gas Plant</a></li>
       <li><a href={'#'}> Composting Bins</a></li>
-      <li><a href={'#'}> Self-Watering Pots</a></li>
       <li><a href={'#'}> Vertical Gardens</a></li>
     </ul>
 

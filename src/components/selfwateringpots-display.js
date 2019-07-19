@@ -21,7 +21,7 @@ const Display = ({}) => {
   `);
 
   return <div className={'wrapper display'}>
-    <h3 className={styles.heading}>GrownGreen Self-Watering Pots/Containers</h3>
+    <h3 className={styles.heading}>Self-Watering Pots/Containers</h3>
     <ul className={styles.list}>
       <li>Self-watering containers/pots provide a uniform point of moisture directly to plants</li>
       <li>Plants have continuous access to water through transpiration pull</li>
