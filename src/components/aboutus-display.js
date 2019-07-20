@@ -2,9 +2,9 @@ import React from "react";
 import styles from './aboutus-display.module.css'
 import {Link} from "gatsby";
 
-const Display = ({}) => {
+const Display = () => {
   return <div className={'wrapper display'} id='aboutus'>
-    <h4 className={styles.heading}>GREEN INNOVATIONS</h4>
+    <h4 className={styles.heading}>Green Innovations</h4>
     <p className={styles.paragraph}><strong>Tech Mechanica Enterprises</strong> is a premier waste management equipment
       manufacturer in
       Kerala. We sell our
@@ -26,23 +26,32 @@ const Display = ({}) => {
       organic waste
       to nutrient rich compost. It is mainly used in apartment complexes in Mumbai & Bangalore. We are the OEM for a
       prominent brand in these markets.</p>
-    <h4 className={styles.heading}>PRODUCT RANGE</h4>
+    <h4 className={styles.heading}>Product Range</h4>
     <ul className={styles.productList}>
       <li><Link to={'/nofuel'}> No Fuel or Fuel Free Incinerator</Link></li>
       <li><Link to={'/diesel'}> Diesel Incinerator</Link></li>
       <li><Link to={'/selfwateringpots'}> Self-Watering Pots</Link></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Napkin Incinerator</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Automatic Composting Machine</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Manual Composting Machine</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Organic Waste Converters</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Waste Shredders</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Waste Dewatering Systems</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Bio Gas Plant</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Composting Bins</a></li>
+      {/* eslint-disable-next-line*/}
       <li><a href={'#'}> Vertical Gardens</a></li>
     </ul>
 
-    <h4 className={styles.heading}> OUR STRENGTHS </h4>
+    <h4 className={styles.heading}> Our Strengths </h4>
     <ul className={styles.strengthList}>
       <li>Experienced & Well qualified Management</li>
       <li>Expert technicians with deep fabrication experience</li>

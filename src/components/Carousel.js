@@ -1,7 +1,6 @@
 import React from "react";
 import {Carousel} from "react-responsive-carousel";
 import {graphql, useStaticQuery} from "gatsby";
-import Img from "gatsby-image";
 
 export default () => {
 
@@ -20,10 +19,10 @@ export default () => {
   }
 }
   `)
-  const images = data.allFile.edges.map(e => <div key={e.node.childImageSharp.fluid.name}><img src={e.node.childImageSharp.fluid.src} alt='image'/>
+  const images = data.allFile.edges.map(e => <div key={e.node.childImageSharp.fluid.name}><img src={e.node.childImageSharp.fluid.src} alt='slide'/>
   </div>)
   return (
-    <Carousel autoPlay infiniteLoop  useKeyboardArrows emulateTouch showThumbs={false}>
+    <Carousel autoPlay infiniteLoop interval={30000}  useKeyboardArrows emulateTouch showThumbs={false}>
       {images}
     </Carousel>
   );

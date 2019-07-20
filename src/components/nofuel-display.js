@@ -3,7 +3,7 @@ import styles from './nofuel-display.module.css'
 import {graphql, useStaticQuery} from "gatsby";
 import PodPhotos from "./photogallery";
 
-const Display = ({}) => {
+const Display = () => {
   const images = useStaticQuery(graphql`
    query NofuelPhotos {
   allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "nofuel"}}) {
@@ -20,7 +20,7 @@ const Display = ({}) => {
 }
   `);
   return <div className={'wrapper display'}>
-    <h3 className={styles.heading}>NO FUEL INCINERATOR</h3>
+    <h3 className={styles.heading}>No Fuel Incinerator</h3>
     <ul className={styles.list}>
       <li> No Operational cost</li>
       <li> Low Maintenance</li>
@@ -31,7 +31,7 @@ const Display = ({}) => {
       <li> Site Relocation possible for Smaller Models</li>
     </ul>
 
-    <h4 className={styles.heading}>HOW NO FUEL INCINERATOR WORKS</h4>
+    <h4 className={styles.heading}>How No Fuel Incinerator Works</h4>
     <p className={styles.paragraph}>Waste burners from Green Innovations convert solid waste to ash without using
       electricity or fossil fuel. It uses calorific value present in waste to produce heat energy which converts waste
       to ash in a matter of hours.</p>
@@ -47,7 +47,7 @@ const Display = ({}) => {
       product life. Cylindrical construction improves the structural strength and prevents structural faults from
       expansion due to high temperature inside burning chamber. High quality ceramic blanket insulation is provided
       inside the double hull steel structure to prevent high skin temperatures for the waste burner.</p>
-    <h4 className={styles.heading}>MAXIMIZING OPERATION EFFICIENCY</h4>
+    <h4 className={styles.heading}>Maximizing Operation Efficiency</h4>
     <p className={styles.paragraph}>More smoke is released into the air during the ‘start-up’ and ‘cool down’ phases of
       the burn cycle than during the ‘full burn phase’ when high temperatures are maintained. Burn only dry feedstock
       initially and periodically add additional waste to the chamber in order to maintain high burn temperatures until
@@ -56,7 +56,7 @@ const Display = ({}) => {
       and burn more evenly than a wet, tightly packed load. Wet waste should only be added after the fire is actively
       burning. Overfilling the burn chamber will prevent the turbulent mixing of burnable oxygen, and should be
       avoided.</p>
-    <h4 className={styles.heading}>DIRECTIONS FOR USE</h4>
+    <h4 className={styles.heading}>Directions For Use</h4>
     <ul className={styles.list}>
       <li> Use the equipment to incinerate solid waste only</li>
       <li> Load wet and dry waste in equal proportion by weight</li>

@@ -3,7 +3,7 @@ import styles from './selfwateringpots-display.module.css'
 import PodPhotos from './photogallery'
 import {graphql, useStaticQuery} from "gatsby";
 
-const Display = ({}) => {
+const Display = () => {
   const images = useStaticQuery(graphql`
    query PodPhotos {
   allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "pods"}}) {

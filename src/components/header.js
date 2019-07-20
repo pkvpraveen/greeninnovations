@@ -28,7 +28,7 @@ function closeNav() {
 const Header = () => {
 
   return (
-    <header className={headerStyles.header + ' wrapper'}>
+    <header className={headerStyles.header}>
       <div className={headerStyles.mastHeader}>
         <div className={headerStyles.logo}>
           <Link to='/'>
@@ -49,7 +49,8 @@ const Header = () => {
           <div className={headerStyles.desktopNav + ' wrapper'}>
             <Link className={headerStyles.desktopNavLink} to='/' activeClassName={headerStyles.active}>
               <FaHome/> Home</Link>
-            <a className={headerStyles.desktopNavLink + ' ' + headerStyles.dropdown}>
+            {/* eslint-disable-next-line*/}
+            <a className={headerStyles.desktopNavLink + ' ' + headerStyles.dropdown} href='#'>
               <FaSeedling/>Products <FaCaretDown/>
               <div className={headerStyles.dropdownContent}>
                 <Link to="/nofuel">No Fuel Incinerator</Link>
@@ -67,13 +68,16 @@ const Header = () => {
                   activeClassName={headerStyles.active}><FaInfoCircle/> About Us</Link>
             <Link className={headerStyles.desktopNavLink} to='/contactus' activeClassName={headerStyles.active}
                   style={{flexShrink: 0}}><FaAddressCard/> Contact Us</Link>
-            <a className={headerStyles.navIcon + ' ' + headerStyles.desktopNavLink} onClick={openNav}>
+            {/* eslint-disable-next-line*/}
+            <a className={headerStyles.navIcon + ' ' + headerStyles.desktopNavLink} onClick={openNav} href='#'>
               <FaAngleDoubleRight/>
             </a>
           </div>
           <div id="mySidenav" className={headerStyles.sidenav}>
-            <a href="javascript:void(0)" className={headerStyles.closebtn} onClick={closeNav}>&times;</a>
+            {/* eslint-disable-next-line*/}
+            <a href="#" className={headerStyles.closebtn} onClick={closeNav}>&times;</a>
             <Link to='/'><FaHome/> Home</Link>
+            {/* eslint-disable-next-line*/}
             <a><FaSeedling/> Products</a>
             <div className={headerStyles.sublist}>
               <Link onClick={closeNav} to='/nofuel'><FaLeaf/> No Fuel Incinerator </Link>
