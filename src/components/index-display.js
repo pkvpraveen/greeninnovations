@@ -8,7 +8,7 @@ import {FaBath, FaLeaf} from "react-icons/fa";
 import {IconContext} from "react-icons";
 import {GiFireplace} from "react-icons/gi";
 
-export default () => <div className={'wrapper ' + styles.root}>
+export default () => <div className={styles.root}>
   <Carousel/>
   <div className={styles.buttonContainer}>
     <a href='#first' className={styles.button}> Learn More</a>
@@ -31,7 +31,7 @@ export default () => <div className={'wrapper ' + styles.root}>
         </IconContext.Provider>
         <h3>No Fuel or Fuel Free Incinerator</h3>
         <p>Want to process your waste without any operational cost?
-        </p><p><Link to="/nofuel" className="button">Learn More</Link>
+        </p><p><Link to="/nofuel" className={classNames(styles.transparent_btn, styles.blue)}>Learn More</Link>
       </p>
       </li>
       <li>
@@ -39,7 +39,8 @@ export default () => <div className={'wrapper ' + styles.root}>
           <span className={classNames(styles.icon)}><GiFireplace size={80}/></span>
         </IconContext.Provider>
         <h3>Diesel Incinerator </h3>
-        <p>Diesel Incinerators use diesel fuel to convert waste to ash.</p><p><Link to="/diesel" className="button">Learn
+        <p>Diesel Incinerators use diesel fuel to convert waste to ash.</p><p><Link to="/diesel"
+                                                                                    className={classNames(styles.transparent_btn, styles.blue)}>Learn
         More</Link></p>
       </li>
       <li>
@@ -48,11 +49,11 @@ export default () => <div className={'wrapper ' + styles.root}>
         </IconContext.Provider>
         <h3 className={styles.subHeading}>Self-Watering Pots</h3>
         <p>The pots that will take care of your plants even in your absence.</p><p><Link to="/selfwateringpots"
-                                                                                         className="button">Learn
+                                                                                         className={classNames(styles.transparent_btn, styles.blue)}>Learn
         More</Link></p>
       </li>
     </ul>
-    <h4 className={classNames(styles.heading, styles.center)}> Our Strengths </h4>
+    <h4 className={classNames(styles.heading, styles.center)}>Leave it to the experts</h4>
     <ul className={styles.strengthList}>
       <li>Experienced & Well qualified Management</li>
       <li>Expert technicians with deep fabrication experience</li>

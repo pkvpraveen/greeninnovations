@@ -3,15 +3,18 @@ import React from "react"
 import Logo from './logo'
 import {
   FaAddressCard,
-  FaAngleDoubleRight, FaCaretDown, FaDumpsterFire,
+  FaBars,
+  FaBath,
+  FaCaretDown,
+  FaDumpsterFire,
   FaHome,
-  FaInfoCircle, FaLeaf,
+  FaInfoCircle,
+  FaLeaf,
   FaNewspaper,
   FaPhone,
   FaRegEnvelope,
   FaSeedling,
-  FaUsers,
-  FaBath
+  FaUsers
 } from "react-icons/fa";
 import {MdPhotoLibrary} from "react-icons/md";
 import headerStyles from './header.module.css';
@@ -41,7 +44,7 @@ const Header = () => {
           }}>Get in touch</p>
           <p><FaPhone size={18} color='#000'/> <a href='tel:+919446605978'>+91 9446605978</a></p>
           <p><FaRegEnvelope size={18} color='#000' style={{marginRight: '2px', marginBottom: '-2px'}}/> <a
-            href='mailto:greeninnovationsinfo@gmail.com'>greeninnovationsinfo@gmail.com</a></p>
+            href='mailto:info@greeninnovations.in'>info@greeninnovations.in</a></p>
         </div>
       </div>
       <div>
@@ -70,7 +73,8 @@ const Header = () => {
                   style={{flexShrink: 0}}><FaAddressCard/> Contact Us</Link>
             {/* eslint-disable-next-line*/}
             <a className={headerStyles.navIcon + ' ' + headerStyles.desktopNavLink} onClick={openNav} href='#'>
-              <FaAngleDoubleRight/>
+              {/*<FaAngleDoubleRight/>*/}
+              <FaBars/>
             </a>
           </div>
           <div id="mySidenav" className={headerStyles.sidenav}>

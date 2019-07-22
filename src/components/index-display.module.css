@@ -108,6 +108,36 @@
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.transparent_btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    color: #FFF;
+    border: 1px solid #FFF;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 120%;
+    background-color: rgba(255,255,255, 0);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: background-color 300ms ease;
+    -moz-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+}
+.transparent_btn:hover {
+    background-color: rgba(255,255,255, 0.3);
+    color: #FFF;
+}
+.transparent_btn.blue {
+    color: #aeddf5;
+    border-color: #aeddf5;
+}
+.transparent_btn.blue:hover {
+    background-color: rgba(174, 221, 245, 0.3);
+}
+
 
 
 @media only screen and (max-width: 650px) {

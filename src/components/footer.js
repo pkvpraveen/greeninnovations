@@ -12,6 +12,7 @@ const Footer = (props) => (
           <ul>
             <li><Link to={'/nofuel'}> No Fuel or Fuel Free Incinerator</Link></li>
             <li><Link to='/diesel'> Diesel Incinerator</Link></li>
+            <li><Link to='/selfwateringpots'> Self-Watering Pots</Link></li>
             <li><a href='#'> Napkin Incinerator</a></li>
             <li><a href='#'> Automatic Composting Machine</a></li>
             <li><a href='#'> Manual Composting Machine</a></li>
@@ -20,7 +21,6 @@ const Footer = (props) => (
             <li><a href='#'> Waste Dewatering Systems</a></li>
             <li><a href='#'> Bio Gas Plant</a></li>
             <li><a href='#'> Composting Bins</a></li>
-            <li><a href='#'> Self-Watering Pots</a></li>
             <li><a href='#'> Vertical Gardens</a></li>
           </ul>
         </p>
@@ -39,6 +39,7 @@ const Footer = (props) => (
           <dt>Phone</dt>
           <dd><a href='tel:+919446605978'> +91 9446605978</a></dd>
           <dt>Email</dt>
+          <dd><a href="mailto:info@greeninnovations.in">info@greeninnovations.in</a></dd>
           <dd><a href="mailto:greeninnovationsinfo@gmail.com">greeninnovationsinfo@gmail.com</a></dd>
           <dd><a href="mailto:techmechanicaenterprises@gmail.com">techmechanicaenterprises@gmail.com</a></dd>
         </dl>
