@@ -11,24 +11,9 @@ import styled from 'styled-components'
 import "./layout.css"
 import Footer from "./footer";
 import Header from "./header";
-import BackgroundImage from "gatsby-background-image";
-import {graphql, useStaticQuery} from "gatsby";
 import WebFont from 'webfontloader';
 
-const Layout = ({children, headerElement, height, align, marginTop = '0px'}) => {
-  const data = useStaticQuery(graphql`
-    query {
-        desktop: file(relativePath: { eq: "SUS2.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `)
-  const imageData = data.desktop.childImageSharp.fluid
-
+const Layout = ({children}) => {
   if (typeof window !== "undefined") {
     WebFont.load({
       google: {
@@ -39,15 +24,10 @@ const Layout = ({children, headerElement, height, align, marginTop = '0px'}) => 
   return (
     <>
       <div id='container'>
-        <BackgroundImage Tag="section"
-                         fluid={imageData}
-                         backgroundColor={`#040e18`}
-        >
-          <div id="main">
-            <Header/>
-            <main style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>{children}</main>
-          </div>
-        </BackgroundImage>
+        <div id="main">
+          <Header/>
+          <main style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>{children}</main>
+        </div>
       </div>
       <Footer/>
     </>

@@ -3,7 +3,7 @@ import styles from './diesel-display.module.css'
 import {graphql, useStaticQuery} from "gatsby";
 import PodPhotos from "./photogallery";
 
-const Display = ({}) => {
+const Display = () => {
   const images = useStaticQuery(graphql`
    query DieselPhotos {
   allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "diesel"}}) {
@@ -20,7 +20,7 @@ const Display = ({}) => {
 }
   `);
   return <div className={'wrapper display'}>
-    <h3 className={styles.heading}>DIESEL INCINERATOR </h3>
+    <h3 className={styles.heading}>Diesel Incinerator </h3>
     <p className={styles.paragraph}>Diesel Incinerators use diesel fuel to convert waste to ash. When compared to no
       fuel Incinerators high temperature in the range of 750 to 850 deg C is achieved in a diesel burner.</p>
     <p className={styles.paragraph}>Combustion air is provided using a natural draft. Diesel Incinerators are
@@ -35,12 +35,12 @@ const Display = ({}) => {
       product life. Cylindrical construction improves the structural strength and prevents structural faults from
       expansion due to high temperature inside burning chamber. High quality ceramic blanket insulation is provided
       inside the double hull steel structure to prevent high skin temperatures for the waste burner.</p>
-    <h4 className={styles.heading}>MAXIMIZING OPERATION EFFICIENCY</h4>
+    <h4 className={styles.heading}>Maximizing Operation Efficiency</h4>
     <p className={styles.paragraph}>More smoke is released into the air during the ‘start-up’ and ‘cool down’ phases of
       the burn cycle than during the ‘full burn phase’ when high temperatures are maintained. Dry, loosely loaded
       material will ignite more quickly and burn more evenly than a wet, tightly packed load. Overfilling the burn
       chamber will prevent the turbulent mixing of burnable oxygen, and should be avoided.</p>
-    <h4 className={styles.heading}>DIRECTIONS FOR USE</h4>
+    <h4 className={styles.heading}>Directions For Use</h4>
     <ul className={styles.list}>
       <li>Use the equipment to incinerate solid waste only</li>
       <li>Load the available waste into the incinerator</li>

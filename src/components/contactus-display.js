@@ -5,7 +5,7 @@ import {FaEnvelope, FaPhone} from "react-icons/fa";
 
 const Display = () => {
   return <div className={'wrapper display'} style={{textAlign: 'left', paddingLeft: '6vw'}}>
-    <h3 className={styles.heading}>CONTACT US</h3>
+    <h3 className={styles.heading}>Contact Us</h3>
     <p>As all our solutions are tailored to your specific needs, the best way to understand which solution is right for
       you is to give us a call or send us an email.</p>
     <br/>

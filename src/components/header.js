@@ -3,15 +3,18 @@ import React from "react"
 import Logo from './logo'
 import {
   FaAddressCard,
-  FaAngleDoubleRight, FaCaretDown, FaDumpsterFire,
+  FaBars,
+  FaBath,
+  FaCaretDown,
+  FaDumpsterFire,
   FaHome,
-  FaInfoCircle, FaLeaf,
+  FaInfoCircle,
+  FaLeaf,
   FaNewspaper,
   FaPhone,
   FaRegEnvelope,
   FaSeedling,
-  FaUsers,
-  FaBath
+  FaUsers
 } from "react-icons/fa";
 import {MdPhotoLibrary} from "react-icons/md";
 import headerStyles from './header.module.css';
@@ -28,7 +31,7 @@ function closeNav() {
 const Header = () => {
 
   return (
-    <header className={headerStyles.header + ' wrapper'}>
+    <header className={headerStyles.header}>
       <div className={headerStyles.mastHeader}>
         <div className={headerStyles.logo}>
           <Link to='/'>
@@ -41,7 +44,7 @@ const Header = () => {
           }}>Get in touch</p>
           <p><FaPhone size={18} color='#000'/> <a href='tel:+919446605978'>+91 9446605978</a></p>
           <p><FaRegEnvelope size={18} color='#000' style={{marginRight: '2px', marginBottom: '-2px'}}/> <a
-            href='mailto:greeninnovationsinfo@gmail.com'>greeninnovationsinfo@gmail.com</a></p>
+            href='mailto:info@greeninnovations.in'>info@greeninnovations.in</a></p>
         </div>
       </div>
       <div>
@@ -49,7 +52,8 @@ const Header = () => {
           <div className={headerStyles.desktopNav + ' wrapper'}>
             <Link className={headerStyles.desktopNavLink} to='/' activeClassName={headerStyles.active}>
               <FaHome/> Home</Link>
-            <a className={headerStyles.desktopNavLink + ' ' + headerStyles.dropdown}>
+            {/* eslint-disable-next-line*/}
+            <a className={headerStyles.desktopNavLink + ' ' + headerStyles.dropdown} href='#'>
               <FaSeedling/>Products <FaCaretDown/>
               <div className={headerStyles.dropdownContent}>
                 <Link to="/nofuel">No Fuel Incinerator</Link>
@@ -67,13 +71,17 @@ const Header = () => {
                   activeClassName={headerStyles.active}><FaInfoCircle/> About Us</Link>
             <Link className={headerStyles.desktopNavLink} to='/contactus' activeClassName={headerStyles.active}
                   style={{flexShrink: 0}}><FaAddressCard/> Contact Us</Link>
-            <a className={headerStyles.navIcon + ' ' + headerStyles.desktopNavLink} onClick={openNav}>
-              <FaAngleDoubleRight/>
+            {/* eslint-disable-next-line*/}
+            <a className={headerStyles.navIcon + ' ' + headerStyles.desktopNavLink} onClick={openNav} href='#'>
+              {/*<FaAngleDoubleRight/>*/}
+              <FaBars/>
             </a>
           </div>
           <div id="mySidenav" className={headerStyles.sidenav}>
-            <a href="javascript:void(0)" className={headerStyles.closebtn} onClick={closeNav}>&times;</a>
+            {/* eslint-disable-next-line*/}
+            <a href="#" className={headerStyles.closebtn} onClick={closeNav}>&times;</a>
             <Link to='/'><FaHome/> Home</Link>
+            {/* eslint-disable-next-line*/}
             <a><FaSeedling/> Products</a>
             <div className={headerStyles.sublist}>
               <Link onClick={closeNav} to='/nofuel'><FaLeaf/> No Fuel Incinerator </Link>

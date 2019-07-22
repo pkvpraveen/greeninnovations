@@ -106,7 +106,7 @@ img {
 }
 
 .display {
-    margin: 100px auto;
+    margin: 50px auto 30px auto;
     padding: 10px;
     text-align: justify;
     color: #333;
@@ -127,6 +127,12 @@ img {
 
     .display {
         font-size: .75rem;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: justify;
+        color: #333;
+        border-radius: unset;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
 
