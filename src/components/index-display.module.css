@@ -67,6 +67,7 @@
 
 .products {
     display: flex;
+    justify-content: space-around;
 }
 
 .products li {
@@ -159,13 +160,7 @@
     }
 
     .button-container {
-        position: absolute;
-        top: 60vh;
-        left: 30%;
-        right: 30%;
-        margin: 10px auto;
-        display: flex;
-        justify-content: center;
+        display: none;
     }
 
     .strength-list li {
