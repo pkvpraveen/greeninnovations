@@ -17,6 +17,7 @@ import {
   FaUsers
 } from "react-icons/fa";
 import {MdPhotoLibrary} from "react-icons/md";
+import {GiBeachBucket} from "react-icons/gi";
 import headerStyles from './header.module.css';
 
 function openNav() {
@@ -58,6 +59,7 @@ const Header = () => {
               <div className={headerStyles.dropdownContent}>
                 <Link to="/nofuel">No Fuel Incinerator</Link>
                 <Link to="/diesel">Diesel Incinerator</Link>
+                <Link to="/manual">Manual Composting Machines</Link>
                 <Link to="/selfwateringpots">Self Watering Pots</Link>
               </div>
             </a>
@@ -86,6 +88,7 @@ const Header = () => {
             <div className={headerStyles.sublist}>
               <Link onClick={closeNav} to='/nofuel'><FaLeaf/> No Fuel Incinerator </Link>
               <Link onClick={closeNav} to='/diesel'><FaDumpsterFire/> Diesel Incinerator </Link>
+              <Link onClick={closeNav} to="/manual"><GiBeachBucket/>Manual Composting Machines</Link>
               <Link onClick={closeNav} to="/selfwateringpots"><FaBath/> Self Watering Pots</Link>
             </div>
             <Link onClick={closeNav} to='customers'><FaUsers/> Customers</Link>

@@ -7,13 +7,14 @@ import classNames from 'classnames';
 import {FaBath, FaLeaf} from "react-icons/fa";
 import {IconContext} from "react-icons";
 import {GiFireplace} from "react-icons/gi";
+import {GiBeachBucket} from "react-icons/gi";
 
 export default () => <div className={styles.root}>
   <Carousel/>
   <div className={styles.buttonContainer}>
     <a href='#first' className={styles.button}> Learn More</a>
   </div>
-  <div id='first' className='display'>
+  <div id='first' className='display wrapper'>
     <h1 className={classNames(styles.heading, styles.center)}>Who we are</h1>
     <p className={styles.paragraph}><strong>Tech Mechanica Enterprises</strong> is a premier waste management equipment
       manufacturer in Kerala. We sell our equipment under the brand <strong>Green Innovations</strong>. From a humble
@@ -40,6 +41,15 @@ export default () => <div className={styles.root}>
         </IconContext.Provider>
         <h3>Diesel Incinerator </h3>
         <p>Diesel Incinerators use diesel fuel to convert waste to ash.</p><p><Link to="/diesel"
+                                                                                    className={classNames(styles.transparent_btn, styles.blue)}>Learn
+        More</Link></p>
+      </li>
+      <li>
+        <IconContext.Provider value={{color: "#b58461"}}>
+          <span className={classNames(styles.icon)}><GiBeachBucket size={80}/></span>
+        </IconContext.Provider>
+        <h3>Manual Composting Machines </h3>
+        <p>Machines for solid waste disposal at source</p><p><Link to="/manual"
                                                                                     className={classNames(styles.transparent_btn, styles.blue)}>Learn
         More</Link></p>
       </li>
