@@ -14,7 +14,8 @@ import {
   FaPhone,
   FaRegEnvelope,
   FaSeedling,
-  FaUsers
+  FaUsers,
+  FaSync
 } from "react-icons/fa";
 import {MdPhotoLibrary} from "react-icons/md";
 import {GiBeachBucket} from "react-icons/gi";
@@ -55,16 +56,17 @@ const Header = () => {
               <FaHome/> Home</Link>
             {/* eslint-disable-next-line*/}
             <a className={headerStyles.desktopNavLink + ' ' + headerStyles.dropdown} href='#'>
-              <FaSeedling/>Products <FaCaretDown/>
+              <FaSeedling/> Products <FaCaretDown/>
               <div className={headerStyles.dropdownContent}>
                 <Link to="/nofuel">No Fuel Incinerator</Link>
                 <Link to="/diesel">Diesel Incinerator</Link>
+                <Link to="/automatic">Automatic Composting Machines</Link>
                 <Link to="/manual">Manual Composting Machines</Link>
                 <Link to="/selfwateringpots">Self Watering Pots</Link>
               </div>
             </a>
             <Link className={headerStyles.desktopNavLink} to='customers'
-                  activeClassName={headerStyles.active}><FaUsers/>Customers</Link>
+                  activeClassName={headerStyles.active}><FaUsers/> Customers</Link>
             <Link className={headerStyles.desktopNavLink} to='/gallery'
                   activeClassName={headerStyles.active}><MdPhotoLibrary/> Gallery</Link>
             <Link className={headerStyles.desktopNavLink} to='/news'
@@ -88,7 +90,8 @@ const Header = () => {
             <div className={headerStyles.sublist}>
               <Link onClick={closeNav} to='/nofuel'><FaLeaf/> No Fuel Incinerator </Link>
               <Link onClick={closeNav} to='/diesel'><FaDumpsterFire/> Diesel Incinerator </Link>
-              <Link onClick={closeNav} to="/manual"><GiBeachBucket/>Manual Composting Machines</Link>
+              <Link onClick={closeNav} to="/automatic"><FaSync/> Automatic Composting Machines</Link>
+              <Link onClick={closeNav} to="/manual"><GiBeachBucket/> Manual Composting Machines</Link>
               <Link onClick={closeNav} to="/selfwateringpots"><FaBath/> Self Watering Pots</Link>
             </div>
             <Link onClick={closeNav} to='customers'><FaUsers/> Customers</Link>

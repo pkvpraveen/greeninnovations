@@ -70,11 +70,13 @@
 .products {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .products li {
     text-align: center;
     padding: 10px 3px;
+    width: 50%;
 }
 
 .products li p {
@@ -109,7 +111,8 @@
     margin: 10px;
     flex-grow: 0;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 1px solid #213b0c;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .transparent_btn {
     display: inline-block;
@@ -159,6 +162,10 @@
 
     .products {
         flex-direction: column;
+    }
+
+    .products li {
+        width: 100%;
     }
 
     .button-container {

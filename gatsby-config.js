@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/greeninnovations",
   siteMetadata: {
     title: `Green Innovations`,
-    description: `Green Innovations`,
+    description: `Green Innovations is a waste management solutions operating from kerala supplying variour products all over India`,
     author: `@pkv`,
   },
   plugins: [

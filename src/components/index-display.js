@@ -5,6 +5,7 @@ import styles from './index-display.module.css'
 import {Link} from "gatsby";
 import classNames from 'classnames';
 import {FaBath, FaLeaf} from "react-icons/fa";
+import {FaSyncAlt} from "react-icons/fa";
 import {IconContext} from "react-icons";
 import {GiFireplace} from "react-icons/gi";
 import {GiBeachBucket} from "react-icons/gi";
@@ -41,6 +42,15 @@ export default () => <div className={styles.root}>
         </IconContext.Provider>
         <h3>Diesel Incinerator </h3>
         <p>Diesel Incinerators use diesel fuel to convert waste to ash.</p><p><Link to="/diesel"
+                                                                                    className={classNames(styles.transparent_btn, styles.blue)}>Learn
+        More</Link></p>
+      </li>
+      <li>
+        <IconContext.Provider value={{color: "#165a48"}}>
+          <span className={classNames(styles.icon)}><FaSyncAlt size={80}/></span>
+        </IconContext.Provider>
+        <h3>Automatic Composting Machines </h3>
+        <p>Machines for solid waste disposal at source</p><p><Link to="/automatic"
                                                                                     className={classNames(styles.transparent_btn, styles.blue)}>Learn
         More</Link></p>
       </li>
