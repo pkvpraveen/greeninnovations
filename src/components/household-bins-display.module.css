@@ -1,0 +1,42 @@
+.heading {
+    padding: 10px;
+    font-size: 3vw;
+    color: #7c795d;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0;
+}
+.subheading {
+    padding: 10px;
+    font-size: 2vw;
+    color: #7c795d;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0;
+}
+
+.paragraph {
+    margin: 20px 10px;
+}
+
+.list {
+    list-style: circle inside;
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 5px;
+}
+
+.imageContainer {
+    padding: 30px;
+}
+
+@media only screen and (max-width: 650px) {
+    .heading {
+        font-size: unset;
+    }
+    .subheading {
+        font-size: unset;
+    }
+}

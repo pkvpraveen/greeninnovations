@@ -13,6 +13,8 @@ const Footer = (props) => (
             <li><Link to={'/nofuel'}> No Fuel or Fuel Free Incinerator</Link></li>
             <li><Link to='/diesel'> Diesel Incinerator</Link></li>
             <li><Link to='/selfwateringpots'> Self-Watering Pots</Link></li>
+            <li><Link to='/householdincinerator'>HOUSEHOLD Incinerator</Link></li>
+            <li><Link to='/householdbins'> HOUSEHOLD Composting Bins</Link></li>
             <li><a href='#'> Napkin Incinerator</a></li>
             <li><a href='#'> Automatic Composting Machine</a></li>
             <li><a href='#'> Manual Composting Machine</a></li>

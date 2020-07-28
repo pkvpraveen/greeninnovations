@@ -5,7 +5,7 @@ import styles from './index-display.module.css'
 import {Link} from "gatsby";
 import classNames from 'classnames';
 import {FaBath, FaLeaf} from "react-icons/fa";
-import {FaSyncAlt} from "react-icons/fa";
+import {FaSyncAlt, FaHome} from "react-icons/fa";
 import {IconContext} from "react-icons";
 import {GiFireplace} from "react-icons/gi";
 import {GiBeachBucket} from "react-icons/gi";
@@ -61,6 +61,24 @@ export default () => <div className={styles.root}>
         <h3>Manual Composting Machines </h3>
         <p>Machines for solid waste disposal at source</p><p><Link to="/manual"
                                                                                     className={classNames(styles.transparent_btn, styles.blue)}>Learn
+        More</Link></p>
+      </li>
+      <li>
+        <IconContext.Provider value={{color: "rgb(8, 40, 102)"}}>
+          <span className={classNames(styles.icon)}><FaHome size={80}/></span>
+        </IconContext.Provider>
+        <h3 className={styles.subHeading}>Household Incinerator</h3>
+        <p>Convert solid waste to ash without using electricity or fossil fuel.</p><p><Link to="/householdincinerator"
+        className={classNames(styles.transparent_btn, styles.blue)}>Learn
+        More</Link></p>
+      </li>
+      <li>
+        <IconContext.Provider value={{color: "rgb(8, 40, 102)"}}>
+          <span className={classNames(styles.icon)}><FaHome size={80}/></span>
+        </IconContext.Provider>
+        <h3 className={styles.subHeading}>Household Composting bins</h3>
+        <p>Convert the organic waste to nutrient rich organic manure.</p><p><Link to="/householdbins"
+        className={classNames(styles.transparent_btn, styles.blue)}>Learn
         More</Link></p>
       </li>
       <li>

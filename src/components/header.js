@@ -63,6 +63,8 @@ const Header = () => {
                 <Link to="/automatic">Automatic Composting Machines</Link>
                 <Link to="/manual">Manual Composting Machines</Link>
                 <Link to="/selfwateringpots">Self Watering Pots</Link>
+                <Link to="/householdincinerator">HOUSEHOLD Incinerator</Link>
+                <Link to="/householdbins">HOUSEHOLD Composting Bins</Link>
               </div>
             </a>
             <Link className={headerStyles.desktopNavLink} to='customers'
@@ -93,6 +95,8 @@ const Header = () => {
               <Link onClick={closeNav} to="/automatic"><FaSync/> Automatic Composting Machines</Link>
               <Link onClick={closeNav} to="/manual"><GiBeachBucket/> Manual Composting Machines</Link>
               <Link onClick={closeNav} to="/selfwateringpots"><FaBath/> Self Watering Pots</Link>
+              <Link onClick={closeNav} to="/householdincinerator"><FaHome/> HOUSEHOLD Incinerator</Link>
+              <Link onClick={closeNav} to="/householdbins"><FaHome/> HOUSEHOLD Composting Bins</Link>
             </div>
             <Link onClick={closeNav} to='customers'><FaUsers/> Customers</Link>
             <Link onClick={closeNav} to='/gallery'><MdPhotoLibrary/> Gallery</Link>
